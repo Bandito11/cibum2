@@ -1,0 +1,10 @@
+<ion-navbar *navbar secondary>
+    <ion-title>Recetas</ion-title>
+</ion-navbar>
+
+<ion-content padding class="recetas">
+    <ion-card class="advanced-background" *ngFor="#receta of recetaLista" (click)="openInfo(receta)">
+        <img src="{{receta.image}}" alt="imagen del {{receta.imagen}}" />
+        <p class="advanced-background-title">{{receta.name}}</p>
+    </ion-card>
+</ion-content>

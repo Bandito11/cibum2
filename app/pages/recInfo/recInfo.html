@@ -1,0 +1,40 @@
+<ion-navbar *navbar secondary>
+    <ion-title>
+        {{info.receta.name}}
+    </ion-title>
+</ion-navbar>
+
+<ion-content padding class="recInfo">
+    <!--TODO:-->
+    <ion-card>
+        <img src="{{info.receta.image}}" alt="imagen de info.receta.name" />
+        <h1 class="card-title">
+          {{info.receta.name}}
+      </h1>
+    </ion-card>
+    <br/>
+    <ion-card>
+        <ion-card-header>
+            Ingredientes
+        </ion-card-header>
+        <ion-list no-lines>
+            <ion-item *ngFor="#ingrediente of info.receta.ingredientes">
+                <ion-avatar item-left>
+                    <img src="{{ingrediente.image}}" alt="imagen de {{ingrediente.name}}" />
+                </ion-avatar>
+                <p>{{ingrediente.name}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+    <br/>
+    <ion-card>
+        <ion-card-header>
+            Pasos a seguir
+        </ion-card-header>
+        <ion-list no-lines>
+            <ion-item *ngFor="#paso of info.receta.pasos; #i = index" text-wrap>
+                <p>{{i + 1 +': ' + paso}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+</ion-content>

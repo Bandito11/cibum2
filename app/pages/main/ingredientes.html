@@ -1,0 +1,21 @@
+<ion-navbar *navbar secondary>
+    <ion-title>Ingredientes</ion-title>
+</ion-navbar>
+
+<ion-content padding class="main">
+    <ion-searchbar [(ngModel)]="searchQuery" #search (input)="searchIngrediente(search.value)"></ion-searchbar>
+    <ion-list>
+        <ion-item *ngFor="#ingrediente of ingredientes">
+            <ion-label>
+                {{ingrediente.name}}
+            </ion-label>
+            <ion-checkbox [(ngModel)]="ingrediente.checked"> </ion-checkbox>
+            <ion-thumbnail item-right>
+                <img src="{{ingrediente.image}}" alt="imagen del {{ingrediente.imagen}}"/>
+            </ion-thumbnail>
+        </ion-item>
+        <button fab fab-right fab-bottom (click)="openRecetas()">
+            <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-list>
+</ion-content>
