@@ -6,7 +6,7 @@ It similar to the other I have in my account and it has the same functionality.
 
 ======
 
-The purpose of the app is to query a list of recipes by the ingredientes chosen. 
+The purpose of the app is to query a list of recipes by the ingredients chosen. 
 It was made for people that didn't know what to do when they open the fridge. 
 
 
